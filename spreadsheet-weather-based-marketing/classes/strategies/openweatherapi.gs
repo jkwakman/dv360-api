@@ -33,6 +33,7 @@ class OpenWeatherAPIStrategy {
         }
 
         const params = {
+            q: data[ config.getHeaderIndex('col-city') ],
             lat: data[ config.getHeaderIndex('col-lat') ],
             lon: data[ config.getHeaderIndex('col-lon') ],
             exclude: "minutely,hourly",
@@ -40,7 +41,7 @@ class OpenWeatherAPIStrategy {
             appid: apiKey,
         };
         
-        const url = "https://api.openweathermap.org/data/2.5/onecall?"
+        const url = "https://api.openweathermap.org/data/2.5/weather?"
             + Utils.encodeParameters(params);
         const anyApi = new AnyAPI(url);
 
