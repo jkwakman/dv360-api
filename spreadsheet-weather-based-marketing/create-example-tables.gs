@@ -52,7 +52,7 @@ function createExampleTable() {
   sheet.getRange("A1:N3").setValues(getExampleTableValues());
 
   // Add colors
-  sheet.getRange("A1:N1")
+  sheet.getRange("A1:O1")
     .setBackgroundRGB(102, 204, 255)
     .setFontWeight("bold");
 
