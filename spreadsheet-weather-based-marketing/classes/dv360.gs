@@ -34,7 +34,7 @@ class DV360 {
      * DV360 Write API Endpoint Prefix
      * See more: https://developers.google.com/display-video/api/reference/rest
      */
-    this.dv360EndPointPrefix = 'https://displayvideo.googleapis.com/v1';
+    this.dv360EndPointPrefix = 'https://displayvideo.googleapis.com/v3';
   }
 
   /**
