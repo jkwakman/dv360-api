@@ -64,6 +64,7 @@ class Config {
       'sheet-name': '',
 
       // Column mappings
+      'col-city':               'City',
       'col-line-item-id':       'Line Item Id',
       'col-insertion-order-id': 'Insertion Order Id',
       'col-advertiser-id':      'Advertiser ID',
