@@ -54,7 +54,7 @@ function createExampleTable() {
   sheet.getRange("A1:N3").setValues(getExampleTableValues());
 
   // Add colors
-  sheet.getRange("A1:N1")
+  sheet.getRange("A1:O1")
     .setBackgroundRGB(102, 204, 255)
     .setFontWeight("bold");
 
@@ -78,11 +78,12 @@ function getExampleTableValues() {
       'Latitude',
       'Longitude',
       'Last Updated',
-      'api:daily.0.clouds',
-      'api:daily.0.rain',
-      'api:daily.0.snow',
-      'api:daily.0.feels_like.!MIN',
-      'api:daily.0.feels_like.!MAX',
+      'api:clouds.all',
+      'api:rain.1h',
+      'api:snow.1h',
+      'api:main.temp_min',
+      'api:main.temp_max',
+      'api:weather.0.main',
     ],
     [
       'Hamburg',
@@ -99,6 +100,7 @@ function getExampleTableValues() {
       '',
       '',
       '',
+      '',
     ],
     [
       'Hamburg',
@@ -109,6 +111,7 @@ function getExampleTableValues() {
       '<Integer: Advertiser ID>',
       '53.55',
       '10',
+      '',
       '',
       '',
       '',
@@ -156,7 +159,7 @@ class DV360 {
      * DV360 Write API Endpoint Prefix
      * See more: https://developers.google.com/display-video/api/reference/rest
      */
-    this.dv360EndPointPrefix = 'https://displayvideo.googleapis.com/v1';
+    this.dv360EndPointPrefix = 'https://displayvideo.googleapis.com/v3';
   }
 
   /**
@@ -569,6 +572,7 @@ class Config {
       'sheet-name': '',
 
       // Column mappings
+      'col-city':               'City',
       'col-line-item-id':       'Line Item Id',
       'col-insertion-order-id': 'Insertion Order Id',
       'col-advertiser-id':      'Advertiser ID',
